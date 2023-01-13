@@ -22,7 +22,7 @@ int lcs(string &str1, string &str2){
               ans = max(ans, dp[i][j]);
           }
           else{
-              + dp[i][j] = 0;
++              dp[i][j] = 0;
           }
       }
   }
