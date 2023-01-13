@@ -8,7 +8,7 @@
 ```
 
 ### --------------------------------------Longest Common String ------------------------------------
-``` 
+```diff
 #include <bits/stdc++.h> 
 int lcs(string &str1, string &str2){
   int n=str1.size();
