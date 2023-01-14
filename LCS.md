@@ -132,6 +132,6 @@ Procedure:
 1. Take common guys single time
 2. len of shortest common supersquence = size(s1) + size(s2) - len(LCS)
 
-![This is an image](https://drive.google.com/file/d/1WD3bHJxJlmwLbpyTxZTswkx9Z_ohhK4B/view)
+![This is an image](https://github.com/manishkr21/coding/blob/main/dp-array-lcs.png)
 ```
 
