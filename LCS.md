@@ -186,3 +186,8 @@ public:
 };
 ```
 
+### Distinct Supersequnce
+```diff
+	S1 = 'babgbag'  S2 = 'bag'
+```
+
