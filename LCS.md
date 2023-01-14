@@ -186,7 +186,7 @@ public:
 };
 ```
 
-### Distinct Supersequnce
+### Distinct Supersequence of S2 in S1
 ```diff
 	S1 = 'babgbag'  S2 = 'bag'
 	HINT: Trying all ways  -> Recursion
@@ -196,6 +196,18 @@ Count the number of ways : Sum them
 	2. Explore all possiblities.
 	3. Return summation of all possibilies.
 	4. base case.
+
+Recursion:
+
+fun(i,j){
+	if(j<0) return 1;    // match found
+	if(i<0) return 0;    // still some char in S2 remain to match
+	if(s1[i] == s2[j]){
+		return (fun(i-1,j-1) + fun(i-1,j)); // match + ignore match
+	}else{
+		return fun(i-1,j);    // just skip first element from the first one  
+	}
+}
 
 ```
 
