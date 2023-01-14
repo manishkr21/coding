@@ -120,6 +120,6 @@ class Solution{
 
 ### Shortest Common Supersequence
 ```diff
-S1 = 'brute'   S2 = 'groot'
+S1 = 'brute'   S2 = 'groot'     = supersequence - 'brutegroot'
 ```
 
