@@ -189,5 +189,13 @@ public:
 ### Distinct Supersequnce
 ```diff
 	S1 = 'babgbag'  S2 = 'bag'
+	HINT: Trying all ways  -> Recursion
+Count the number of ways : Sum them
+! Procedure to write Recurrence:
+	1. Express everything in term of (i,j).
+	2. Explore all possiblities.
+	3. Return summation of all possibilies.
+	4. base case.
+
 ```
 
