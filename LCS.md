@@ -133,7 +133,8 @@ Procedure:
 2. len of shortest common supersquence = size(s1) + size(s2) - len(LCS)
 
 ! see Example - 
-https://raw.githubusercontent.com/manishkr21/coding/main/dp-array-lcs.png
+
 
 ```
+![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/dp-array-lcs.png)
 
