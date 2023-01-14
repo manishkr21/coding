@@ -131,5 +131,7 @@ ans = size(LCS) + size(S1) - size(LCS) + size(S2) - size(LCS)
 Procedure:
 1. Take common guys single time
 2. len of shortest common supersquence = size(s1) + size(s2) - len(LCS)
+
+![This is an image](https://drive.google.com/file/d/1WD3bHJxJlmwLbpyTxZTswkx9Z_ohhK4B/view)
 ```
 
