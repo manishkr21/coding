@@ -82,8 +82,8 @@ public:
             }
         }
 
-        int len = dp[n][n];
-        return n-len;
++       int len = dp[n][n];
++       return n-len;
     }
 };
 
