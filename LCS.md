@@ -170,10 +170,10 @@ public:
                 res+=str1[i-1];
                 i--;j--;
             }else if(dp[i-1][j] > dp[i][j-1]){
- +              res+=str1[i-1];
++              res+=str1[i-1];
                 i--;
             }else{
- +              res+=str2[j-1];
++              res+=str2[j-1];
                 j--;
             }
         }
