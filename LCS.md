@@ -120,6 +120,6 @@ class Solution{
 
 ### Shortest Common Supersequence
 ```diff
-S1 = 'brute'   S2 = 'groot'     = supersequence - 'brutegroot'
+S1 = 'brute'   S2 = 'groot'   , supersequence -> 'brutegroot'          Is is shortest ? 
 ```
 
