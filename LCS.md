@@ -198,7 +198,7 @@ public:
 	3. Return summation of all possibilies.
 	4. base case.
 
-! Recursion:
+! Recursion: TC - exponential   {2^n * 2^m}   SC - O(N+M)
 fun(i,j){
 	if(j<0) return 1;    // match found
 	if(i<0) return 0;    // still some char in S2 remain to match
