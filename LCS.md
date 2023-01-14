@@ -93,7 +93,7 @@ public:
 ### Minimum insertion/deletion to convert a string A to string B
 ```diff
 !A= 'abcd'  B='anc'
-> abcd {two deletions}  ->  ac {one insertion}(LCS)  -> anc
+= abcd {two deletions}  ->  ac {one insertion}(LCS)  -> anc
 
 
 
