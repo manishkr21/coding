@@ -56,7 +56,7 @@ public:
 ```diff
 S = "abc"
 ! You can insert any character anywhere in the string
-! to make it palindrome just add reverse of it , but wwould take O(length of string) operation required. we need to reduce it
+! to make it palindrome just add reverse of it , but wwould take O(length of string) operation, we need to reduce it
 
 
 ```
