@@ -7,7 +7,7 @@
 @@ text in purple (and bold)@@
 ```
 
-### --------------------------------------Longest Common String ------------------------------------
+### Longest Common String
 ```diff
 #include <bits/stdc++.h> 
 int lcs(string &str1, string &str2){
@@ -30,7 +30,7 @@ int lcs(string &str1, string &str2){
 
 }
 ```
-### --------------------------------Longest Common Palindrome-------------------------------------
+### Longest Common Palindrome
 ```diff   
 class Solution {
 public:
