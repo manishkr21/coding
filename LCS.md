@@ -190,15 +190,15 @@ public:
 ```diff
 	S1 = 'babgbag'  S2 = 'bag'
 	HINT: Trying all ways  -> Recursion
-Count the number of ways : Sum them
+	Count the number of ways : Sum them
+	
 ! Procedure to write Recurrence:
 	1. Express everything in term of (i,j).
 	2. Explore all possiblities.
 	3. Return summation of all possibilies.
 	4. base case.
 
-Recursion:
-
+! Recursion:
 fun(i,j){
 	if(j<0) return 1;    // match found
 	if(i<0) return 0;    // still some char in S2 remain to match
