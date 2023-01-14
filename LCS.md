@@ -269,4 +269,4 @@ public:
 };
 
 ```
-
+![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/distinct-subseq.png)
