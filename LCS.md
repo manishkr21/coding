@@ -94,8 +94,8 @@ public:
 ```diff
  A= 'abcd'  B='anc'
 ! abcd {two deletions}  ->  ac {one insertion}(LCS)  -> anc
- > number of deletion = len of string A - size of LCS
- > number of insertion = len of string B - size of LCS
++ number of deletion = len of string A - size of LCS
++ number of insertion = len of string B - size of LCS
 
 class Solution{
 	public:
