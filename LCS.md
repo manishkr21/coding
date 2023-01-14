@@ -57,6 +57,11 @@ public:
 S = "abc"
 ! You can insert any character anywhere in the string
 ! to make it palindrome just add reverse of it , but wwould take O(length of string) operation, we need to reduce it
-
+Procedure:
+1. find longest common palidrome
+2. keep it intact
+3. condingninjas       --->   palindrome {ingni}
+4. cond - {sajn} - ingni - njas - {donc} if we find the length of it say n
+5. ans = n - size of longest common palindrome 
 
 ```
