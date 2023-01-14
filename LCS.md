@@ -55,6 +55,7 @@ public:
 ### Minimum insertion to make a string palindrome
 ```diff
 S = "abc"
+! You can insert any character anywhere in the string
 ! to make it palindrome just add reverse of it , but wwould take O(length of string) operation required. we need to reduce it
 
 
