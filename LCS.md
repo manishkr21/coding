@@ -125,7 +125,8 @@ Is is shortest ? ans is no => shortest supersequence "bgruoote"
 
 S1='bleed'     S2='blue'      Shortest Supersequence -> 'bleued'
  
-+ ans = size(LCS) + size(S1) - size(LCS) + size(S2) - size(LCS) => n+m+size(LCS)
+ans = size(LCS) + size(S1) - size(LCS) + size(S2) - size(LCS) 
++ so, ans = n+m+size(LCS)
 
 Procedure:
 1. Take common guys single time
