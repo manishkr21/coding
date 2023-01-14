@@ -132,7 +132,7 @@ Procedure:
 1. Take common guys single time
 2. len of shortest common supersquence = size(s1) + size(s2) - len(LCS)
 
-![This is an image](https://raw.githubusercontent.com/manishkr21/coding/blob/main/dp-array-lcs.png)
-https://raw.githubusercontent.com/manishkr21/coding/main/dp-array-lcs.png
+![This is an image](https://raw.githubusercontent.com/manishkr21/coding/main/dp-array-lcs.png)
+
 ```
 
