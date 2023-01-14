@@ -61,7 +61,7 @@ Procedure:
 1. find longest common palidrome
 2. keep it intact
 3. condingninjas       --->   palindrome {ingni}
-4. cond {sajn} ingni njas {donc} if we find the length of it say n
-5. ans = n - size of longest common palindrome 
+4. cond {sajn} ingni njas {donc}    --->  if we find the length of it say n
++ 5. ans = n - size of longest common palindrome 
 
 ```
