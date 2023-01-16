@@ -405,12 +405,12 @@ public:
         int m = word2.size();
         vector<int> prev(m+1,0), curr(m+1,0);
       
-    	for(int j=0;j<=m;j++) prev[j] = j; // now using one based indexing
++    	for(int j=0;j<=m;j++) prev[j] = j; // now using one based indexing
         
 	for(int i=1;i<=n;i++){
-        curr[0] = i;
++       curr[0] = i;
         for(int j=1;j<=m;j++){
-            if(word1[i-1]==word2[j-1]) curr[j]=prev[j-1];
++           if(word1[i-1]==word2[j-1]) curr[j]=prev[j-1];
             else{
                 int insert = 1+curr[j-1];
                 int delet = 1+prev[j];
@@ -419,9 +419,9 @@ public:
             }
            
         }	
-        prev = curr;
++       prev = curr;
 	}
-        return prev[m];      
++        return prev[m];      
 
     }
 };
