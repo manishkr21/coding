@@ -298,5 +298,9 @@ You have the following three operations permitted on a word:
 - Insert a character
 - Delete a character
 - Replace a character <br>
+
+```diff
 ! Example : word1 = "horse", word2 = "ros"
+
+```
 
