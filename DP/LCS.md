@@ -309,6 +309,29 @@ You have the following three operations permitted on a word:
 1. insert the same character
 2. delete and try finding somewhere else
 3. replace and match
+4. try all ways  -> recurrence
+
+	
+! Procedure to write Recurrence:
+	1. Express everything in term of (i,j).
+	2. Explore all possiblities.
+	3. Return min of all paths.
+	4. base case.
+
+fun(n-1,m-1)  -> min operations to convert s1[0..i] to s2[0..j]
+
+fun(i,j){
+//base case
+if(i<0) return j+1;  // see below image
+if(j<0) return 
+
+if(str1[i]==str2[j]) return fun(i-1,j-1)
+insert = fun(i,j-1)
+delete = fun(i-1,j)
+replace = fun(i-1,j-1)
+return min(insert,delete,replace)
+}
 
 ```
-
+![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/edit-distance3.png)
+![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/edit-distance4.png)
