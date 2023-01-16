@@ -122,7 +122,7 @@ class Solution{
 ### Shortest Common Supersequence
 ```diff
 S1 = 'brute'   S2 = 'groot'   , supersequence -> 'brutegroot'          
-Is is shortest ? ans is no => shortest supersequence "bgruoote"
+It is shortest ? ans is no => shortest supersequence "bgruoote"
 
 S1='bleed'     S2='blue'      Shortest Supersequence -> 'bleued'
  
