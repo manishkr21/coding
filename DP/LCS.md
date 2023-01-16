@@ -327,16 +327,15 @@ if(i<0) return j+1;  // see below image
 if(j<0) return i+1;  // see below image
 
 if(str1[i]==str2[j]) return fun(i-1,j-1)
-insert = 1+fun(i,j-1)
-delete = 1+fun(i-1,j)
-replace = 1+fun(i-1,j-1)
++ insert = 1+fun(i,j-1)
++ delete = 1+fun(i-1,j)
++ replace = 1+fun(i-1,j-1)
 return min(insert,delete,replace)
 }
 
 Note: overlapping subproblem    ->     memoization
 ```
 ![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/edit-distance3.png)
-![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/edit-distance4.png)
 
 
 ```diff
