@@ -368,7 +368,34 @@ public:
     }
 };
 
+! Tabulation - to reduce the aux stack space we convert solu into tabulation 
+! NOTE: in tabulation we can not go beyond zero so we need to convert the above range from [-1 to n]  to [0 to n+1]
+class Solution {
+public:
 
+    int minDistance(string word1, string word2) {
+        int n = word1.size();
+        int m = word2.size();
+	    vector<vector<int>> dp(n+1,vector<int>(m+1,-1));
++    	for(int i=0;i<=n;i++) dp[i][0] = i; // now using one based indexing
++    	for(int j=0;j<=m;j++) dp[0][j] = j; // now using one based indexing
+        
+	for(int i=1;i<=n;i++){
+        for(int j=1;j<=m;j++){
+            if(word1[i-1]==word2[j-1]) dp[i][j]=dp[i-1][j-1];
+ +           else{
+                int insert = 1+dp[i][j-1];
+                int delet = 1+dp[i-1][j];
+                int replace = 1+dp[i-1][j-1];
+                dp[i][j]=min(insert, min(delet, replace));
+            }
+           
+        }	
+	}
+        return dp[n][m];      
+
+    }
+};
 
 ```
 
