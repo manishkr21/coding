@@ -321,17 +321,17 @@ You have the following three operations permitted on a word:
 fun(n-1,m-1)  -> min operations to convert s1[0..i] to s2[0..j]
 
 ! Recursion:
-fun(i,j){
-//base case
-if(i<0) return j+1;  // see below image
-if(j<0) return i+1;  // see below image
+	fun(i,j){
+	//base case
+	if(i<0) return j+1;  // see below image
+	if(j<0) return i+1;  // see below image
 
-if(str1[i]==str2[j]) return fun(i-1,j-1)
-+ insert = 1+fun(i,j-1)
-+ delete = 1+fun(i-1,j)
-+ replace = 1+fun(i-1,j-1)
-return min(insert,delete,replace)
-}
+	if(str1[i]==str2[j]) return fun(i-1,j-1)
++		insert = 1+fun(i,j-1)
++ 		delete = 1+fun(i-1,j)
++ 		replace = 1+fun(i-1,j-1)
+		return min(insert,delete,replace)
+	}
 
 Note: overlapping subproblem    ->     memoization
 ```
