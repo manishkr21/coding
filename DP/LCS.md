@@ -299,6 +299,7 @@ You have the following three operations permitted on a word:
 - Delete a character
 - Replace a character <br>
 
+![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/edit-distance.png)
 ```diff
 ! Example : word1 = "horse", word2 = "ros"
 
