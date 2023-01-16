@@ -312,7 +312,7 @@ You have the following three operations permitted on a word:
 4. try all ways  -> recurrence
 
 	
-! Procedure to write Recurrence:
+! Procedure to write Recurrence:    TC: exp   SC: O(n+m)
 	1. Express everything in term of (i,j).
 	2. Explore all possiblities.
 	3. Return min of all paths.
@@ -320,18 +320,55 @@ You have the following three operations permitted on a word:
 
 fun(n-1,m-1)  -> min operations to convert s1[0..i] to s2[0..j]
 
+! Recursion:
 fun(i,j){
 //base case
 if(i<0) return j+1;  // see below image
-if(j<0) return 
+if(j<0) return i+1;  // see below image
 
 if(str1[i]==str2[j]) return fun(i-1,j-1)
-insert = fun(i,j-1)
-delete = fun(i-1,j)
-replace = fun(i-1,j-1)
+insert = 1+fun(i,j-1)
+delete = 1+fun(i-1,j)
+replace = 1+fun(i-1,j-1)
 return min(insert,delete,replace)
 }
 
+Note: overlapping subproblem    ->     memoization
 ```
 ![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/edit-distance3.png)
 ![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/edit-distance4.png)
+
+
+```diff
+! Memoization    TC: O(n*m)   SC: O(n+m)+O(n*m)    // aux stack space  + dp array
+
+class Solution {
+public:
+    int fun(string w1,int i, string w2,int j,vector<vector<int>> &dp){
+         if(i<0) return j+1;
+         if(j<0) return i+1;
+         if(dp[i][j] != -1) return dp[i][j];
++        if(w1[i]==w2[j]) return dp[i][j]=fun(w1,i-1,w2,j-1,dp);
++        int insert = 1+fun(w1,i,w2,j-1,dp);
++        int delet = 1+fun(w1,i-1,w2,j,dp);
++        int replace = 1+fun(w1,i-1,w2,j-1,dp);
++        return dp[i][j]=min(insert, min(delet, replace));
+
+    }
+
+    int minDistance(string word1, string word2) {
+        int n = word1.size();
+        int m = word2.size();
+    
+        vector<vector<int>> dp(n,vector<int>(m,-1));
+
+        return fun(word1,n-1,word2,m-1,dp);
+        
+
+    }
+};
+
+
+
+```
+
