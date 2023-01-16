@@ -300,6 +300,7 @@ You have the following three operations permitted on a word:
 - Replace a character <br>
 
 ![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/edit-distance.png)
+![All for IMage](https://raw.githubusercontent.com/manishkr21/coding/main/edit-distance2.png)
 ```diff
 ! Example : word1 = "horse", word2 = "ros"
 
