@@ -111,8 +111,8 @@ class Solution{
 		    else dp[i][j] = max(dp[i-1][j],dp[i][j-1]);
 		}
 	    }
-+	    int insertions = n - dp[n][m];
-+	    int deletions =  m - dp[n][m];
++	    int deletions = n - dp[n][m];
++	    int insertions =  m - dp[n][m];
 	    return insertions + deletions;
 	} 
 };
