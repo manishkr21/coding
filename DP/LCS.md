@@ -437,8 +437,6 @@ The matching should cover the entire input string (not partial).
 
 ```diff
 
-
-
 class Solution {
 public:
    int fun(int i, int j, string &s, string &p, vector<vector<int>> &dp){
