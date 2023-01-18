@@ -429,3 +429,61 @@ public:
 
 ```
 
+### Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*' where:
+
+'?' Matches any single character.
+'*' Matches any sequence of characters (including the empty sequence).
+The matching should cover the entire input string (not partial).
+
+```diff
+
+
+
+class Solution {
+public:
+   int fun(int i, int j, string &s, string &p, vector<vector<int>> &dp){
+        //base case
+
+        // 3. if both exhaust
+        if(i<0 && j<0) return true;
+
+        // 1. if p exhaust
+        else if(i>=0 && j<0) return false;
+
+        // 2. if s exhaust
+        else if(i<0 && j>=0) {
+            for(int k=0;k<=j;k++){
+                if(p[k] != '*'){
+                    return  false;
+                } 
+                return true;
+            }
+        }
+                
+        
+        
+        if(dp[i][j] != -1) return dp[i][j];
+        
+        // if pattern have ?
+        if(s[i] == p[j] || p[i] == '?'){
+                return dp[i][j] = fun(i-1,j-1,s,p,dp);
+        }
+        
+        // if pattern have *
+        else{
+            if(p[i] == '*') return dp[i][j] = fun(i,j-1,s,p,dp) || fun(i-1,j,s,p,dp);   // empty match + single match
+
+        }
+        return dp[i][j] = false;
+ }
+
+    bool isMatch(string s, string p) {
+        int n = s.size();
+        int m = p.size();
+        vector<vector<int>> dp(n+1,vector<int> (m+1,-1));
+        return fun(n-1,m-1,s,p,dp);
+    }
+};
+
+```
+
