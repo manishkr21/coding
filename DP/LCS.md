@@ -7,6 +7,7 @@
 # text in gray
 @@ text in purple (and bold)@@
 ```
+## Longest Common Substring
 
 ### Longest Common String
 ```diff
