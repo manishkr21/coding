@@ -16,13 +16,17 @@
  1. Express everything in term of index.
  2. Explore all the possbility.
  3. take the max length take or not take.
+ 4. Base case
  
  + fun(ind, prev_ind) : prev index allows us to make a decision to pick of not to pick following items
  fun(0,-1) : give me the length of LIS starting from 0 with not previous element.
  fun(3,0) : length of LIS starting from 3rd index, whose prev_ind is 0
  
- ! Recurrence :
+ ! Recurrence :   TC - 2^n    SC - O(n) stack space
  fun(ind,prev_ind){
+      // Base case
+      // run out of the index
+      if(ind == n) return 0;
       
       // take 
       if(prev_ind == -1 || arr[ind] > arr[prev_ind]){
@@ -34,5 +38,13 @@
       return max(take,not_take);
  
  }
+ 
+ ! Overlapping subproblem -> Memoization 
+ 
+ ind = [0...n-1]  ,   prev_ind = [-1...n-1]
+ now here we are traversing from -1 for prev_ind so we have to change the co ordinates
+ -1 , 0 , 1, 2, 3, 4, 5, ...
+ 0, 1, 2, 3, 4, 5, ...
+ 
  
 ``` 
