@@ -26,15 +26,15 @@
  fun(ind,prev_ind){
       // Base case
       // run out of the index
-      if(ind == n) return 0;
++      if(ind == n) return 0;
       
       // take 
-      if(prev_ind == -1 || arr[ind] > arr[prev_ind]){
++      if(prev_ind == -1 || arr[ind] > arr[prev_ind]){
            take = 1+fun(ind+1,ind);
       }
       
       // not take
-      not_take = 0+fun(ind+1,prev_ind);
++      not_take = 0+fun(ind+1,prev_ind);
       return max(take,not_take);
  
  }
