@@ -49,7 +49,7 @@
  so dp size will be : [n][n+1]
  
 ! Memoization    TC : O(n*n)   SC : O(n*n) + O(2*n) auxiliary stack space 
- 
+! passing by refernce of an array or string is necessary it may cause TLE
 class Solution {
 public:
     int fun(int ind,int prev_ind, vector<int> &nums, vector<vector<int>> &dp,int n){
