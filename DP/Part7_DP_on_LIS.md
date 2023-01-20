@@ -58,14 +58,15 @@ public:
 +        if(ind == n)    return 0;
      
         if(dp[ind][prev_ind+1] != -1) return dp[ind][prev_ind+1];
+        
+        // not take case
 +        int len = 0 + fun(ind+1, prev_ind,nums,dp, n); // len of subsequnce remain same as prev
 
         // take case
-       
 +       if(prev_ind == -1 || nums[ind] > nums[prev_ind]){
             len = max(len,1 + fun(ind+1, ind, nums, dp, n)); // len of subsequnce
         }
-        // not take case
+        
         
         return dp[ind][prev_ind+1] = len; 
     }
