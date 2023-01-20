@@ -107,7 +107,7 @@ public:
     }
 
 
-! Optimized Solution :
+! Optimized Solution :     TC : O(n*n)     SC : O(n*2)
    
    int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
