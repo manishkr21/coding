@@ -42,9 +42,39 @@
  ! Overlapping subproblem -> Memoization 
  
  ind = [0...n-1]  ,   prev_ind = [-1...n-1]
- now here we are traversing from -1 for prev_ind so we have to change the co ordinates
+ now here we are traversing from -1 for prev_ind so we have to change the co ordinates for prev_ind
  -1 , 0 , 1, 2, 3, 4, 5, ...
  0, 1, 2, 3, 4, 5, ...
+ 
+ so dp size will be : [n][n+1]
+ 
+ ! Memoization    TC : O(n*n)   SC : O(n*n) + O(2*n) auxiliary stack space 
+ 
+class Solution {
+public:
+    int fun(int ind,int prev_ind, vector<int> &nums, vector<vector<int>> &dp,int n){
+        // base case
+        // if ind exhaust
++        if(ind == n)    return 0;
+     
+        if(dp[ind][prev_ind+1] != -1) return dp[ind][prev_ind+1];
++        int len = 0 + fun(ind+1, prev_ind,nums,dp, n); // len of subsequnce remain same as prev
+
+        // take case
+       
+ +       if(prev_ind == -1 || nums[ind] > nums[prev_ind]){
+            len = max(len,1 + fun(ind+1, ind, nums, dp, n)); // len of subsequnce
+        }
+        // not take case
+        
+        return dp[ind][prev_ind+1] = len; 
+    }
+    int lengthOfLIS(vector<int>& nums) {
+        int n = nums.size();
+        vector<vector<int>> dp(n,vector<int>(n+1,-1));
+        return fun(0,-1,nums, dp,n);
+    }
+};
  
  
 ``` 
