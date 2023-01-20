@@ -9,7 +9,7 @@
  arr2 = [8,8,8]
  LIS = [8]    len = 1 {clearly state that increasing}
  
- + Various subsequence -> print all the Subsequence -> {Recursion, powerset} -> check for increase -> store the longest -> brute way -> 2^n
++ Various subsequence -> print all the Subsequence -> {Recursion, powerset} -> check for increase -> store the longest -> brute way -> 2^n
  "do not work"
  
  Recurrence Method:
@@ -18,11 +18,11 @@
  3. take the max length take or not take.
  4. Base case
  
- + fun(ind, prev_ind) : prev index allows us to make a decision to pick of not to pick following items
++ fun(ind, prev_ind) : prev index allows us to make a decision to pick of not to pick following items
  fun(0,-1) : give me the length of LIS starting from 0 with not previous element.
  fun(3,0) : length of LIS starting from 3rd index, whose prev_ind is 0
  
- ! Recurrence :   TC - 2^n    SC - O(n) stack space
+! Recurrence :   TC - 2^n    SC - O(n) stack space
  fun(ind,prev_ind){
       // Base case
       // run out of the index
@@ -39,7 +39,7 @@
  
  }
  
- ! Overlapping subproblem -> Memoization 
+! Overlapping subproblem -> Memoization 
  
  ind = [0...n-1]  ,   prev_ind = [-1...n-1]
  now here we are traversing from -1 for prev_ind so we have to change the co ordinates for prev_ind
@@ -48,7 +48,7 @@
  
  so dp size will be : [n][n+1]
  
- ! Memoization    TC : O(n*n)   SC : O(n*n) + O(2*n) auxiliary stack space 
+! Memoization    TC : O(n*n)   SC : O(n*n) + O(2*n) auxiliary stack space 
  
 class Solution {
 public:
@@ -62,7 +62,7 @@ public:
 
         // take case
        
- +       if(prev_ind == -1 || nums[ind] > nums[prev_ind]){
++       if(prev_ind == -1 || nums[ind] > nums[prev_ind]){
             len = max(len,1 + fun(ind+1, ind, nums, dp, n)); // len of subsequnce
         }
         // not take case
@@ -71,8 +71,8 @@ public:
     }
     int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
-        vector<vector<int>> dp(n,vector<int>(n+1,-1));
-        return fun(0,-1,nums, dp,n);
++        vector<vector<int>> dp(n,vector<int>(n+1,-1));
++        return fun(0,-1,nums, dp,n);
     }
 };
  
