@@ -7,9 +7,9 @@
 # text in gray
 @@ text in purple (and bold)@@
 ```
-## Longest Common Substring
+## Longest Common Subsequnce
 
-### Longest Common Substring
+### Longest Common Subsequnce
 
 ```diff
 // memoization solution
