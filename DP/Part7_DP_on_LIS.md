@@ -166,9 +166,14 @@ public:
     }
 };
 
+``` 
+
+### Printing the LIS
+
+```diff
 
 
-! Printing the LIS 
+! Printing the LIS            TC : O(N*N)    SC : O(N)
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -210,5 +215,4 @@ int longestIncreasingSubsequence(int nums[], int n)
         
 }
 
-
-``` 
+```
