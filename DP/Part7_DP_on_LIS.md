@@ -132,7 +132,7 @@ public:
      
     }
 
-! More Optimized Solution :     TC : O(nlogn)     SC : O
+! More Optimized Solution :     TC : O(n*n)     SC : O(n)
 
 dp[i] - signifies the longest increasing Subsequnece that ends at index i till now.
 
