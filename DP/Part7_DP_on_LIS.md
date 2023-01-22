@@ -132,5 +132,39 @@ public:
      
     }
 
+! More Optimized Solution :     TC : O(nlogn)     SC : O
+
+dp[i] - signifies the longest increasing Subsequnece that ends at index i till now.
+
+Items = [5,4,11,1,16,8]
+
+so, dp = [1,1,2,1,3,2]
+
+Method : 
+
+First step : dp[1,1,1,1,1,1]    { Every element has atleast one LIS i.e. itself }
+Second step : Look from left to right and check if prev item less than curr one, if it is than curr = max(curr, 1 + prev) { which is less than curr }
+          
+          dp[1,1,2,1,3,2]
+
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        int n = nums.size();
++        vector<int> dp(n,1);
+        int ans = 1;
+        for(int i=0;i<n;i++){
+            for(int prev=0;prev<i;prev++){
++                if(nums[i] > nums[prev]){
++                    dp[i] = max(dp[i],1+dp[prev]);
+                }
+                
+            }   
++            ans = max(ans , dp[i]); 
+        }
+        return ans;       
+    }
+};
+
 
 ``` 
