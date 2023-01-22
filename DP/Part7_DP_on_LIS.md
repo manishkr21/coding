@@ -111,21 +111,21 @@ public:
    
    int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
-+        vector<int> prev(n+1,0), curr(n+1,0);
++        vector<int> next(n+1,0), curr(n+1,0);
         for(int ind=n-1;ind>=0;ind--){
             for(int prev_ind=ind-1;prev_ind>=-1;prev_ind--){
 
                 // not take case
-+                int len = 0 + prev[prev_ind+1];  // len of subsequnce remain same as prev
++                int len = 0 + next[prev_ind+1];  // len of subsequnce remain same as prev
 
                 // take case
                 if(prev_ind == -1 || nums[ind] > nums[prev_ind]){
-+                   len = max(len, 1+ prev[ind+1]);    // len of subsequnce
++                   len = max(len, 1+ next[ind+1]);    // len of subsequnce
                 }
 
 +                curr[prev_ind+1] = len; 
             }
-+            prev = curr;
++            next = curr;
         }
     
 +        return curr[-1+1];
