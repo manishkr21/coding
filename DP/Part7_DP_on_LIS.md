@@ -167,8 +167,8 @@ public:
 };
 
 ``` 
-
-### Printing the LIS
+ 
+### Printing the LIS | DP(42)
 
 ```diff
 
