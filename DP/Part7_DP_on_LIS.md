@@ -167,4 +167,48 @@ public:
 };
 
 
+
+! Printing the LIS 
+
+#include <bits/stdc++.h>
+using namespace std;
+int longestIncreasingSubsequence(int nums[], int n)
+{
+
+        int maxi = 1;
+        int lastIndex = 0;
+        vector<int> dp(n,1), hash(n);
+        for(int i=0;i<n;i++){
+            hash[i] = i;
+            for(int prev=0;prev<i;prev++){
++                if(nums[i] > nums[prev]  && 1+dp[prev] > dp[i]){
++                    dp[i] = 1+ dp[prev];
++                    hash[i] = prev;
+                }
+                
+            }   
+
+            if(dp[i] > maxi){
+                maxi = dp[i];
+                lastIndex = i;
+            }
+
+        }
+        vector<int> ans;
++        ans.push_back(nums[lastIndex]);
++        while(lastIndex != hash[lastIndex]){
+            
++            lastIndex = hash[lastIndex];
++            ans.push_back(nums[lastIndex]);
+        }
+
++        reverse(ans.begin(), ans.end());
+        for(int i=0;i<ans.size();i++){
++            // cout << ans[i] << " ";   // this line print the LIS Sequence
+        }
+        return ans.size();
+        
+}
+
+
 ``` 
